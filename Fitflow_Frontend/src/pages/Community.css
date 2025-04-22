@@ -1,0 +1,146 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: #fafafa;
+}
+
+.community-container {
+    display: flex;
+    height: 100vh;
+    background-color: #fafafa;
+}
+
+.sidebar {
+    width: 250px; /* Fixed width for sidebar */
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    border-right: 1px solid #dbdbdb;
+}
+
+.feed {
+    margin-left: 300px; /* Matches the sidebar width */
+    flex: 1; /* Take remaining space */
+    padding: 20px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+/* Post Card Styles */
+.post-card {
+    width: 100%;
+    max-width: 600px;
+    background-color: #ffffff;
+    border: 1px solid #dbdbdb;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.post-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.post-card img {
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.post-card-header {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.post-card-header img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.post-card-header h3 {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.post-card-actions {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.post-card-actions button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.post-card-actions button:hover {
+    opacity: 0.7;
+}
+
+.post-card-likes {
+    padding: 0 10px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.post-card-caption {
+    padding: 10px;
+    font-size: 14px;
+}
+
+.post-card-comments {
+    padding: 10px;
+    font-size: 14px;
+    color: #8e8e8e;
+}
+
+/* Floating Action Button */
+.MuiFab-primary {
+    background-color: #0095f6 !important;
+}
+
+/* Snackbar */
+.MuiSnackbar-root {
+    z-index: 9999;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .community-container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid #dbdbdb;
+    }
+
+    .feed {
+        padding: 10px;
+    }
+
+    .post-card {
+        max-width: 100%;
+    }
+}
