@@ -55,7 +55,7 @@ function App() {
   }
 
   return (
-    <Router>
+    <Router basename="/fitness360">
       <DataProvider>
         <div>
           <TopBar isLoggedIn={isLoggedIn} userData={userData} handleLogout={handleLogout} />
